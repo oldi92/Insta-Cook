@@ -1,0 +1,162 @@
+{
+  "recipe1": {
+    "title": "Bacon, egg and spinach salad with roasted tomatoes",
+    "info": {
+      "cookTime": "less than 10 mins",
+      "prepTime": "less than 30 mins",
+      "serves": "Serves 2"
+    },
+    "gravy": [
+      "2 tbsp extra virgin olive oil",
+      "½ tbsp sherry vinegar",
+      "1 tbsp wholegrain mustard"
+    ],
+    "ingredientsList": [
+      "2 slices good-quality wholemeal bread",
+      "drizzle olive oil",
+      "6 ripe baby plum tomatoes, halved",
+      "1 garlic clove, finely sliced",
+      "2 rashers back bacon, fat removed",
+      "2 very fresh free-range eggs",
+      "1 tsp vinegar (such as white wine vinegar)",
+      "250g/9oz baby spinach, washed",
+      "3 sprigs fresh basil, leaves torn",
+      "sea salt and freshly ground black pepper"
+    ],
+    "ingredients": "bread tomato garlic bacon egg spinach mustard",
+    "method": "Preheat the oven to 200C/400F/Gas 6.  Tear the bread into bite-sized pieces and scatter in an even layer over a baking tray. Drizzle with a little olive oil.  Place the tomatoes onto a separate tray, scatter with the sliced garlic, placing slices on top of the tomatoes and season with pepper. Place both trays in the oven for 8-10 minutes, or until the bread is golden-brown and crisp. Set aside and leave to cool.  Heat a griddle pan over a high heat until hot. Fry the bacon until charred on both sides and cooked through. Once cooked, chop into small pieces.  For the dressing, place all the ingredients into a clean jam jar or a small watertight tub. Add two tablespoons of water and seal. Shake until emulsified. Season with salt and pepper to taste. (The dressing can be stored and used in other dishes as it will make more than you need for this salad.)  Bring a large pan of water to a simmer and add the white wine vinegar (don’t be tempted to add salt as this will cause the egg whites to disintegrate and will ruin your poached eggs). Crack the eggs into a small ramekin or dish. Briefly whisk the water to create a vortex before gently pouring the cracked eggs into the centre of the slowly spinning water. Poach for four minutes in gently simmering water, or until cooked to your liking. Remove from the pan and drain thoroughly on kitchen paper.  To serve, put the bread pieces, roasted tomatoes, three-quarters of the chopped bacon and all of the spinach and basil into a large bowl. Spoon over 1-2 tablespoons of the dressing and toss to combine. Place onto serving plates and top with a poached egg. Season with pepper and sprinkle over the remaining bacon bits. Serve immediately."
+  },
+  "recipe2": {
+    "title": "Easy chicken tagine",
+    "info": {
+      "cookTime": "40 mins",
+      "prepTime": "less than 10 mins",
+      "serves": "Serves 4"
+    },
+    "ingredientsList": [
+      "2 tbsp olive oil",
+      "8 skinless boneless chicken thighs, halved if large",
+      "1 onion, chopped",
+      "2 tsp grated fresh root ginger",
+      "400g carrot",
+      "cut into sticks small bunch parsley",
+      "roughly chopped lemon",
+      "flaked sea salt and freshly ground black pepper"
+    ],
+    "ingredients": "chicken onion ginger carrot parsley lemon",
+    "method": "Heat the oil in a large, wide pan with a lid, add the chicken, then fry quickly until lightly coloured. Add the onion and ginger, then fry for a further 2 mins. Add 150ml water, the saffron, honey and carrots, season, then stir well. Bring to the boil, cover tightly, then simmer for 30 mins until the chicken is tender. Uncover and increase the heat for about 5 mins to reduce the sauce a little. Sprinkle with parsley and serve with lemon wedges for squeezing over."
+  },
+  "recipe3": {
+    "title": "How to cook salmon ",
+    "info": {
+      "cookTime": "30 mins",
+      "prepTime": "less than 30 mins",
+      "serves": "Serves 2"
+    },
+    "ingredientsList": [
+      "2 salmon fillets, skin on For the poached salmon",
+      "1 fish stock cube",
+      "600ml/1 pint boiling water",
+      "salt and freshly ground black pepper",
+      "2 lemon slices",
+      "2 sprigs fresh thyme",
+      "2 tbsp olive oil",
+      "1 tsp chilli powder"
+    ],
+    "ingredients": "salmon lemon thyme",
+    "method": "To make the poached salmon, dissolve the stock cube in the boiling water and pour into a saucepan. Add the lemon slices and enough water to come 5cm/2in up the side of the pan (approximately 600ml/1 pint). Bring to the boil, then reduce the heat to a simmer.Season the salmon with salt and pepper on both sides, then lower into the pan skin side down and simmer for 8–10 minutes, depending on the size of the fillets, until opaque. Remove from the heat, uncover and leave to stand in the poaching liquid for 5 minutes. Resting helps the salmon stay intact. Carefully remove the salmon and serve immediately or leave to cool and chill in the fridge, until ready to use. To make the salmon en papillote, preheat the oven to 190C/170C Fan/Gas 5. Season the salmon with salt and pepper and place just off centre on a square sheet of greaseproof paper. Lay the lemon slices and thyme on top of the salmon. Fold the greaseproof paper in half over the salmon and double fold around the edges to create a seal.Put the papillote on a baking tray and bake for 12–15 minutes. Carefully open the packet to allow the steam to escape. Remove the thyme and serve immediately. To make the pan-fried salmon, rub each fillet with chilli powder, 1 tablespoon of oil and season with salt and pepper. Heat the remaining 1 tablespoon of oil in a frying pan over a medium-high heat. Once hot, add the salmon skin side down and cook for 4 minutes, until the skin is crisp. Turn and cook for a further 3 minutes. Remove from the pan and serve immediately."
+  },
+  "recipe4": {
+    "title": "Roast turkey and stuffing",
+    "info": {
+      "cookTime": "2 hour",
+      "prepTime": "30 mins to 1 hour",
+      "serves": "Serves 10"
+    },
+    "gravy": [
+      "1.2 litres/2 pints stock (see above, or chicken stock",
+      "1 tbsp softened butter",
+      "1-2 tbsp plain flour"
+    ],
+    "ingredientsList": [
+      "4.5-5.5kg/10-12lb whole turkey, with giblets",
+      "1 onion, halved",
+      "1 carrot",
+      "2 celery sticks",
+      "2 sprigs of fresh parsley",
+      "2 sprigs of fresh thyme",
+      "175g/6oz butter",
+      "flaked sea salt and freshly ground black pepper"
+    ],
+    "ingredients": "turkey onion celery parsley thyme butter flour",
+    "method": "For the stock, put the giblets, onion, carrot, celery and herbs in a saucepan and season. Cover with about 2 litres/3½ pints cold water and bring to the boil, then reduce the heat and simmer for 2 hours, or until you have a flavoursome stock. Strain and set aside for making the gravy. (The stock can be made a day or two in advance; cover and store in the fridge, then skim any fat from the top.) Preheat the oven to 200C/180C Fan/Gas 6. For the stuffing, melt the butter in a saucepan over a medium heat. When it is foaming, add the chopped onions and season. Cover with greaseproof paper and a lid, turn the heat to low and cook for 8-10 minutes, or until completely softened. Set aside to cool. Put the cooled onions in a mixing bowl. Mix in the breadcrumbs and mixed herbs and season to taste. Weigh the stuffing to assist with calculating the cooking time.  Season the turkey cavity at both ends. Stuff some of the stuffing into the main cavity, but be careful not to pack it in - there must be enough space between the stuffing and breastbone to fit the handle of a wooden spoon. Stuff the smaller cavity at the neck end, again leaving a little space. Put the turkey into a large roasting tray. Melt the 175g/6oz butter, then soak the muslin in the butter and wrap it over the turkey. To calculate the cooking time, add the weight of the turkey and stuffing together. Roast for 15 minutes, then turn the oven down to 180C/160C Fan/Gas 4 and roast for 15 minutes per 450g/1lb of the total weight. Baste with the juices every 30 minutes; it is important to do this quickly so as to not let the turkey cool down, as this could alter the cooking time. Remove the muslin 15 minutes before the end of roasting and baste again. To test if the turkey is cooked, insert a small fruit or vegetable knife into the thicktest part of the meat, between the leg and breast; the juices that run should be clear, with no sign of pink; if there is any pink, return the turkey to the oven for another 15-20 minutes, or until cooked through. Tranfer the turkey to a carving dish. Cover it with parchment paper, then place a clean tea-towel over it to keep it nice and snug. Leave it to rest for at least 30 minutes, or up to 1½ hours. Meanwhile, for the gravy, skim off the fat from the roasting tray with a spoon. Place the tray on a medium heat and deglaze it by pouring in the stock. Using a whisk, scrape free all the caramelised bits on the bottom of the tray. Bring the mixture to the boil, then carefully pour it into a saucepan through a sieve and season. To thicken the gravy, mix together the butter and flour, then whisk it into the gravy. Bring the mixture to a simmer, then remove from the heat. Carve the turkey and serve on warm plates with the stuffing and hot gravy."
+  },
+  "recipe5": {
+    "title": "King prawn and broccoli stir fry",
+    "info": {
+      "cookTime": "10 to 30 mins",
+      "prepTime": "less than 30 mins",
+      "serves": "Serves 4"
+    },
+    "ingredientsList": [
+      "2 tbsp sunflower oil",
+      "2 large shallots, very thinly sliced",
+      "1 red chilli, seeds removed, thinly sliced",
+      "2cm/¾in piece ginger, peeled and thinly sliced",
+      "350g/12oz raw peeled king prawns",
+      "250g/9oz broccoli, cut into tiny florets",
+      "150g/5½oz oyster mushrooms, thickly sliced",
+      "6 tbsp black bean sauce",
+      "2 tbsp dark soy sauce",
+      "½ lemon, juice only",
+      "salt and freshly ground black pepper"
+    ],
+    "ingredients": "onion ginger prawn broccoli mushrooms lemon",
+    "method": "Heat a large frying pan until very hot. Add the oil, shallots, chilli and ginger and fry for 30 seconds. Season the prawns with salt and pepper. Push the vegetables to one side of the pan. Add the prawns and fry until starting to turn pink. Add the broccoli and mushrooms, toss together using two spatulas and fry for about 2–3 minutes. Mix the black bean sauce, soy sauce and lemon juice together in a bowl. Add to the pan and toss. Stir fry for another 2 minutes until the prawns are cooked and the broccoli is just cooked but still crunchy. Serve piping hot, on its own or with rice or noodles."
+  },
+  "recipe6": {
+    "title": "Roasted sausage and potato supper",
+    "info": {
+      "cookTime": "30 mins to 1 hour",
+      "prepTime": "less than 30 mins",
+      "serves": "Serves 4"
+    },
+    "ingredientsList": [
+      "2 tbsp olive oil",
+      "2 large onions, sliced lengthways into wedges",
+      "2 red peppers, deseeded and diced",
+      "2 garlic cloves, chopped",
+      "1 tbsp chopped fresh thyme leaves",
+      "500g/1lb 2oz baby new potatoes, halved",
+      "12 sausages, pricked with a fork",
+      "200ml/7fl oz white wine",
+      "salt and freshly ground black pepper"
+    ],
+    "ingredients": "sausage onion peppers garlic thyme potato",
+    "method": "Preheat the oven to 220C/200C Fan/Gas 7. Place all the ingredients except the wine in a large, resealable freezer bag. Seal the bag shut and shake well to coat everything in the oil. Alternatively, put everything in a large bowl and turn the ingredients until they are fully coated in the oil. Tip into a large roasting tin, spreading the ingredients out into one even layer and ensuring that the sausages aren’t covered by any of the vegetables. Season well with salt and pepper. Roast for about 30–35 minutes until golden-brown.Remove from the oven, turn the sausages over and toss the vegetables in the cooking juices. Pour in the wine and return to the oven for a further 20 minutes or until browned and the sausages are cooked and the potatoes tender. Serve hot with a dollop of mustard on the side."
+  },
+  "recipe7": {
+    "title": "Roasted sausage and potato supper",
+    "info": {
+      "cookTime": "over 2 hours",
+      "prepTime": "less than 30 mins",
+      "serves": "Serves 6"
+    },
+    "gravy": [
+      "3 tbsp lamb fat",
+      "50g/1¾oz plain flour",
+      "450ml/16fl oz hot lamb or beef stock",
+      "100ml/3½fl oz red wine",
+      "1–2 tsp redcurrant jelly"
+    ],
+    "ingredientsList": [
+      "2.25kg/5lb whole shoulder of lamb, skin on",
+      "4 garlic cloves, sliced",
+      "2 large onions, cut into quarters",
+      "750g/1lb 10oz waxy potatoes, such as Desiree, peeled and cut into thick 2cm/¾in slices",
+      "570ml/1pint hot lamb or beef stock"
+    ],
+    "ingredients": "lamb garlic onion potato flour",
+    "method": "Preheat the oven to 220C/200C Fan/Gas 7. Sit the lamb, skin-side up, on a board. Using a sharp knife, insert irregular holes through the skin. Insert the garlic into the holes. Place the lamb in a roasting tin and roast for about 20 minutes until brown. Carefully turn the lamb over and roast for a further 20–30 minutes until brown all over.  Boil the onion in water for 10 minutes, then add the potatoes and boil for 4 minutes. Drain well. Remove the lamb from the tin. Add the onions and potatoes to the tin and mix together. Add the stock to the tin, then put the lamb on top and cover tightly with foil. Reduce the temperature of the oven to 160C/140C Fan/Gas 3 and cook for 3½–4 hours, or until the lamb is completely tender. Remove the lamb from the tin and place on a board. Strain off the fat from the tin into a small bowl in order to use in the gravy. Increase the oven to 220C/200C Fan/Gas7 and put the potatoes and onions back into the oven to brown for 25 minutes.  To make the gravy, spoon the lamb fat into a saucepan. Add the flour and stir over the heat for 30 seconds. Whisk in the stock, wine, redcurrant jelly, Worcestershire sauce and browning. Whisk until thickened and bubbling. Carve the lamb and serve with gravy and potatoes and onion. Serve with green vegetables."
+  }
+}

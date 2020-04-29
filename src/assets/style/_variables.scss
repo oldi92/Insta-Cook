@@ -1,0 +1,80 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin btn-primary {
+  button {
+    &:hover {
+      cursor: pointer;
+      background-color: $bg-button-hover-primary;
+    }
+    font-size: 1rem;
+    margin: 1rem 0.2rem 0.2rem 0.2rem;
+
+    @include lg() {
+      width: 13%;
+    }
+    border: none;
+    border-radius: 5px;
+    background-color: $bg-button-primary;
+    padding: 0.5rem;
+    color: $color-white;
+  }
+}
+
+@mixin btn-ingredients {
+  button {
+    &:hover {
+      cursor: pointer;
+      background-color: $bg-button-hover-primary;
+    }
+    background-color: $bg-button-primary;
+    border: none;
+    color: $color-white;
+    border-radius: 3px;
+    padding: 0.2rem;
+  }
+}
+
+// Color we Apply Variables
+$bg-primary: rgb(255, 181, 181);
+$bg-button-primary: #007bff;
+$bg-button-black: rgb(54, 54, 54);
+$bg-button-hover-black: rgb(78, 78, 78);
+$bg-button-hover-primary: #3d9bff;
+$color-white: rgb(230, 230, 230);

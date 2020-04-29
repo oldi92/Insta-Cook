@@ -1,0 +1,117 @@
+@import "./variables";
+
+.Container {
+  overflow-x: hidden;
+  background-color: $bg-primary;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  text-align: center;
+  .options {
+    @include sm() {
+      padding-top: 23vh;
+    }
+    padding-top: 19vh;
+    .title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      .vegetablesBack {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        background: transparent;
+        border: none;
+        color: $color-white;
+        font-size: 1.2rem;
+      }
+    }
+    .titleHello {
+      font-weight: bold;
+    }
+    .category {
+      @include btn-primary();
+      img {
+        width: 4.5rem;
+      }
+    }
+    .SearchButton {
+      &:hover {
+        cursor: pointer;
+        background-color: $bg-button-hover-primary;
+      }
+      background-color: $bg-button-primary;
+      color: $color-white;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem;
+      img {
+        width: 3.5rem;
+      }
+    }
+    .ingredients {
+      width: 95%;
+      @include md() {
+        width: 60%;
+      }
+      @include xl() {
+        width: 40%;
+      }
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+      column-gap: 0;
+      button {
+        &:disabled {
+          cursor: no-drop;
+          background-color: $bg-button-black;
+        }
+        &:hover:disabled {
+          cursor: no-drop;
+          background-color: $bg-button-black;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: $bg-button-hover-primary;
+        }
+        font-size: 0.8rem;
+        margin: 0.1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $bg-button-primary;
+        color: $color-white;
+        img {
+          width: 2rem;
+        }
+      }
+    }
+    .ingredientsSelected {
+      width: 95%;
+      @include md() {
+        width: 60%;
+      }
+      @include xl() {
+        width: 40%;
+      }
+      padding-bottom: 4rem;
+      margin: auto;
+      margin-top: 7rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(6.2rem, 1fr));
+      column-gap: 0;
+      button {
+        &:hover {
+          cursor: pointer;
+          background-color: $bg-button-hover-black;
+        }
+        max-height: 1.4rem;
+        font-size: 0.8rem;
+        margin: 0.1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $bg-button-black;
+        color: $color-white;
+      }
+    }
+  }
+}
