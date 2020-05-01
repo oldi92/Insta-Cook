@@ -189,3 +189,25 @@ export const recipeFilter = (ingredientsSelected, recipes) => {
     console.log("[ACTION]", recipesFiltered);
   };
 };
+
+/**change the toggle variable on reducer for the menu slide in and out */
+export const toggleMenu = () => {
+  return {
+    type: actionTypes.TOGGLE_MENU,
+  };
+};
+
+/**change the toggle variable on reducer for the menu slide in and out */
+export const toggleMenuOpen = () => {
+  return {
+    type: actionTypes.TOGGLE_MENU_OPEN,
+  };
+};
+
+/**this pass the data from dashboard to the preview recipe component throw redux */
+export const recipePreviewDataPass = (recipe) => {
+  return {
+    type: actionTypes.RECIPE_PREVIEW_DATA_PASS,
+    recipe: [recipe],
+  };
+};

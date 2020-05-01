@@ -2,104 +2,7 @@
 
 .containcer {
   background-color: $bg-primary;
-  padding-top: 1rem;
-  .menu {
-    z-index: 10;
-    margin-top: -1rem;
-    color: $color-white;
-    position: absolute;
-    min-height: 100vh;
-    width: 100%;
-    background-color: $bg-button-black;
-    @include lg() {
-      overflow-y: auto;
-      position: fixed;
-      min-height: unset;
-      float: left;
-      width: 30%;
-      height: 100vh;
-    }
-    .close {
-      &:hover {
-        cursor: pointer;
-      }
-      font-size: 2rem;
-      float: right;
-      color: $color-white;
-      margin: 0.5rem 1.5rem 0 0;
-      padding: 0.5rem;
-    }
-    .menuToggle {
-      &:hover {
-        cursor: pointer;
-      }
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-      text-align: center;
-      position: absolute;
-      top: 2rem;
-      right: -1.83rem;
-      background-color: $bg-button-black;
-      color: $color-white;
-      font-weight: 800;
-      padding: 0.5rem;
-      border-radius: 0px 10px 10px 0px;
-    }
-    .menuContainer {
-      @include lg() {
-        margin-top: 5rem;
-        padding-top: 0rem;
-        overflow-y: auto;
-        height: 84%;
-      }
-      width: 90%;
-      margin: auto;
-      text-align: center;
-      padding-top: 7rem;
-      .collapse {
-        position: relative;
-        background-color: $bg-primary;
-        padding: 0.6rem 0.4rem 0.4rem 0.8rem;
-        margin-bottom: 2rem;
-        h2 {
-          @include lg() {
-            font-size: 1.5rem;
-          }
-        }
-        .arrowDown {
-          &:hover {
-            cursor: pointer;
-          }
-          position: absolute;
-          padding: 0.3rem;
-          top: 0.5rem;
-          right: 2rem;
-          color: $color-white;
-        }
-        .card {
-          @include btn-ingredients();
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-          column-gap: 0.2rem;
-          row-gap: 0.2rem;
-        }
-      }
-      .searchButton {
-        &:hover {
-          cursor: pointer;
-          background-color: $bg-button-hover-primary;
-        }
-        background-color: $bg-button-primary;
-        border: none;
-        color: $color-white;
-        border-radius: 3px;
-        margin-top: 2rem;
-        padding: 0.5rem 2rem 0.5rem 2rem;
-        img {
-          width: 3.5rem;
-        }
-      }
-    }
-  }
+  padding-top: 3.3rem;
   .dashboardContainer {
     background-color: $bg-primary;
     display: grid;
@@ -111,6 +14,12 @@
       width: 70%;
     }
     .dashboard {
+      transition: all 0.2s;
+      &:hover {
+        transition: all 0.2s;
+        cursor: pointer;
+        max-width: 26rem;
+      }
       max-width: 24rem;
       z-index: 0;
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);

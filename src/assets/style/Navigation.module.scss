@@ -1,0 +1,119 @@
+@import "./variables";
+
+.menu {
+  z-index: 10;
+  margin-top: -1rem;
+  color: $color-white;
+  position: fixed;
+  min-height: 103vh;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-button-black;
+  @include lg() {
+    position: fixed;
+    min-height: unset;
+    float: left;
+    width: 30%;
+    min-height: 103vh;
+  }
+  .close {
+    &:hover {
+      cursor: pointer;
+    }
+    font-size: 2rem;
+    float: right;
+    color: $color-white;
+    margin: 1.5rem 1.5rem 0 0;
+    padding: 0.5rem;
+  }
+  .menuToggle {
+    &:hover {
+      cursor: pointer;
+    }
+    z-index: 15;
+    position: fixed;
+    right: -100%;
+    top: 1rem;
+    margin-right: 25%;
+    font-size: 2rem;
+    color: $color-white;
+  }
+  .back {
+    &:hover {
+      cursor: pointer;
+    }
+    position: fixed;
+    color: $color-white;
+    top: 0.6rem;
+    right: -33%;
+    height: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .menuModal {
+    position: fixed;
+    background-color: rgba(40, 40, 40, 0.85);
+    right: -100%;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .menuContainer {
+    @include lg() {
+      margin-top: 5rem;
+      padding-top: 0rem;
+      overflow-y: auto;
+      height: 84%;
+    }
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 7rem;
+    .collapse {
+      position: relative;
+      background-color: $bg-primary;
+      padding: 0.6rem 0.4rem 0.4rem 0.8rem;
+      margin-bottom: 2rem;
+      h2 {
+        @include lg() {
+          font-size: 1.5rem;
+        }
+      }
+      .arrowDown {
+        &:hover {
+          cursor: pointer;
+        }
+        position: absolute;
+        padding: 0.3rem;
+        top: 0.5rem;
+        right: 2rem;
+        color: $color-white;
+      }
+      .card {
+        @include btn-ingredients();
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+        column-gap: 0.2rem;
+        row-gap: 0.2rem;
+      }
+    }
+    .searchButton {
+      &:hover {
+        cursor: pointer;
+        background-color: $bg-button-hover-primary;
+      }
+      background-color: $bg-button-primary;
+      border: none;
+      color: $color-white;
+      border-radius: 3px;
+      margin-top: 2rem;
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      img {
+        width: 3.5rem;
+      }
+    }
+  }
+}

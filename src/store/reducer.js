@@ -1,6 +1,7 @@
 import * as actionTypes from "./actionTypes";
 
 const initialState = {
+  toggle: false,
   loader: false,
   vegetablesIngredients: [],
   meatIngredients: [],
@@ -9,6 +10,7 @@ const initialState = {
   recipes: [],
   recipesFiltered: [],
   error: false,
+  recipePreview: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -95,6 +97,21 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         recipesFiltered: action.recipesFiltered,
+      };
+    case actionTypes.TOGGLE_MENU:
+      return {
+        ...state,
+        toggle: !state.toggle,
+      };
+    case actionTypes.TOGGLE_MENU_OPEN:
+      return {
+        ...state,
+        toggle: true,
+      };
+    case actionTypes.RECIPE_PREVIEW_DATA_PASS:
+      return {
+        ...state,
+        recipePreview: action.recipe,
       };
     default:
       return state;

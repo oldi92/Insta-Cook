@@ -1,0 +1,67 @@
+@import "./variables";
+
+.recipePreview {
+  background-color: $bg-primary;
+  color: $bg-button-black;
+  padding-top: 3.3rem;
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.2;
+    background-color: $bg-button-black;
+    width: 90%;
+  }
+  @include lg() {
+    float: right;
+    width: 70%;
+    background-color: red;
+  }
+
+  .title {
+    padding: 0 0 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .infoAndImage {
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      .infoCol {
+        padding-left: 0.8rem;
+        .infoColImage {
+          float: left;
+          width: 20%;
+          img {
+            width: 100%;
+          }
+        }
+        .infoColText {
+          float: right;
+          width: 80%;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+  .ingredients {
+    h2 {
+      margin-left: -3rem;
+    }
+    img {
+      width: 2rem;
+      margin-right: 0.4rem;
+    }
+    padding-left: 4rem;
+  }
+  .method {
+    img {
+      width: 2rem;
+      margin-right: 0.4rem;
+    }
+    padding: 1rem;
+  }
+}
