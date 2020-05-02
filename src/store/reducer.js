@@ -7,6 +7,10 @@ const initialState = {
   meatIngredients: [],
   otherIngredients: [],
   ingredientSelected: [],
+  vegetablesSeleted: [],
+  vegetablesSum: 0,
+  meatSum: 0,
+  otherSum: 0,
   recipes: [],
   recipesFiltered: [],
   error: false,
@@ -112,6 +116,36 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         recipePreview: action.recipe,
+      };
+    case actionTypes.VEGETABLES_SUM_ADD:
+      return {
+        ...state,
+        vegetablesSum: state.vegetablesSum + 1,
+      };
+    case actionTypes.MEAT_SUM_ADD:
+      return {
+        ...state,
+        meatSum: state.meatSum + 1,
+      };
+    case actionTypes.OTHER_SUM_ADD:
+      return {
+        ...state,
+        otherSum: state.otherSum + 1,
+      };
+    case actionTypes.VEGETABLES_SUM_REMOVE:
+      return {
+        ...state,
+        vegetablesSum: state.vegetablesSum - 1,
+      };
+    case actionTypes.MEAT_SUM_REMOVE:
+      return {
+        ...state,
+        meatSum: state.meatSum - 1,
+      };
+    case actionTypes.OTHER_SUM_REMOVE:
+      return {
+        ...state,
+        otherSum: state.otherSum - 1,
       };
     default:
       return state;

@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
 import app from "../firebase/Config";
+import { store } from "../index";
 
 /** fetch vegeterian ingredients start */
 export const fetchVegetablesBegin = () => {
@@ -116,19 +117,107 @@ export const fetchOther = () => {
   };
 };
 
-//**on click ingredient selected add */
+//**on click ingredient selected add BEGIN */
 export const ingredientAdd = (ingredient) => {
+  return (dispatch) => {
+    dispatch(ingredientAddSuccess(ingredient));
+    dispatch(ingredientsSelectedSumAdd(ingredient));
+  };
+};
+
+//**from the ingredients are selected we gonna increase the category sum the vegetables or the meat or the other */
+export const ingredientsSelectedSumAdd = (ingredient) => {
+  return (dispatch) => {
+    //we get the state from reducer
+    const state = store.getState();
+    if (state.vegetablesIngredients.includes(ingredient)) {
+      dispatch(vegetablesSumADD());
+    } else if (state.meatIngredients.includes(ingredient)) {
+      dispatch(meatSumADD());
+    } else {
+      dispatch(otherSumADD());
+    }
+  };
+};
+
+//**on click ingredient selected add */
+export const ingredientAddSuccess = (ingredient) => {
   return {
     type: actionTypes.INGREDIENT_ADD,
     ingredient: ingredient,
   };
 };
 
-//**on click ingredient selected removed */
+//**if the ingredient is vegetable we increase the vegetables sum */
+export const vegetablesSumADD = () => {
+  return {
+    type: actionTypes.VEGETABLES_SUM_ADD,
+  };
+};
+
+//**if the ingredient is meat we increase the meat sum */
+export const meatSumADD = () => {
+  return {
+    type: actionTypes.MEAT_SUM_ADD,
+  };
+};
+
+//**if the ingredient is other we increase the other sum */
+export const otherSumADD = () => {
+  return {
+    type: actionTypes.OTHER_SUM_ADD,
+  };
+};
+
+//**on click ingredient selected removed BEGIN */
 export const ingredientRemove = (ingredient) => {
+  return (dispatch) => {
+    dispatch(ingredientRemoveSuccess(ingredient));
+    dispatch(ingredientsSelectedSumRemove(ingredient));
+  };
+};
+
+//**on click ingredient selected removed SUCESSS*/
+export const ingredientRemoveSuccess = (ingredient) => {
   return {
     type: actionTypes.INGREDIENT_REMOVE,
     ingredient: ingredient,
+  };
+};
+
+//**from the ingredient is selected we gonna decrease the category sum the vegetables or the meat or the other */
+export const ingredientsSelectedSumRemove = (ingredient) => {
+  return (dispatch) => {
+    //we get the state from reducer
+    const state = store.getState();
+    if (state.vegetablesIngredients.includes(ingredient)) {
+      dispatch(vegetablesSumRemove());
+    } else if (state.meatIngredients.includes(ingredient)) {
+      dispatch(meatSumRemove());
+    } else {
+      dispatch(otherSumRemove());
+    }
+  };
+};
+
+//**if the ingredient is vegetable we increase the vegetables sum */
+export const vegetablesSumRemove = () => {
+  return {
+    type: actionTypes.VEGETABLES_SUM_REMOVE,
+  };
+};
+
+//**if the ingredient is meat we increase the meat sum */
+export const meatSumRemove = () => {
+  return {
+    type: actionTypes.MEAT_SUM_REMOVE,
+  };
+};
+
+//**if the ingredient is other we increase the other sum */
+export const otherSumRemove = () => {
+  return {
+    type: actionTypes.OTHER_SUM_REMOVE,
   };
 };
 
@@ -179,10 +268,15 @@ export const recipeFilter = (ingredientsSelected, recipes) => {
     console.log("[ACTION]", ingredientFiltered);
     console.log("[ACTION RECIPES]", recipes);
 
-    // we filter the recipes from the ingredients user chose
-    const recipesFiltered = recipes.filter((element) =>
-      element.ingredients.includes(ingredientFiltered)
-    );
+    let recipesFiltered;
+    if (ingredientsSelected.length === 0) {
+      recipesFiltered = [];
+    } else {
+      // we filter the recipes from the ingredients user chose
+      recipesFiltered = recipes.filter((element) =>
+        element.ingredients.includes(ingredientFiltered)
+      );
+    }
 
     //we pass the filtered recipes array to reducer
     dispatch(recipeFilterSuccess(recipesFiltered));

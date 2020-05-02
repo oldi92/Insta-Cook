@@ -6,8 +6,6 @@ import recipe from "../../assets/recipe.png";
 import meat from "../../assets/meat.png";
 import other from "../../assets/other.png";
 import vegetables from "../../assets/vegetables.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import * as actions from "../../store/actions";
 
 class Main extends Component {
@@ -16,22 +14,10 @@ class Main extends Component {
   };
 
   render() {
-    let ingredientSelectedDiv = [];
-    if (this.props.ingredientSelected) {
-      ingredientSelectedDiv = this.props.ingredientSelected.map((element) => (
-        <button
-          key={element}
-          onClick={() => this.props.oningredientRemove(element)}
-        >
-          {element}{" "}
-          <FontAwesomeIcon
-            style={{ color: "#007bff", marginLeft: "0.5rem" }}
-            icon={faTimes}
-            size="1x"
-          />
-        </button>
-      ));
-    }
+    let ingredientsSelectedDiv = [];
+    ingredientsSelectedDiv = this.props.ingredientSelected.map((element) => (
+      <div>{element}</div>
+    ));
 
     return (
       <div className={classes.Container}>
@@ -45,16 +31,31 @@ class Main extends Component {
               <img src={vegetables} alt="vegetables" />
               <br />
               Vegetables
+              {this.props.vegetablesSum > 0 ? (
+                <span style={{ paddingLeft: "0.4rem" }}>
+                  ({this.props.vegetablesSum})
+                </span>
+              ) : null}
             </button>
             <button onClick={() => this.props.history.push("/meat")}>
               <img src={meat} alt="vegetables" />
               <br />
               Meat or Fish
+              {this.props.meatSum > 0 ? (
+                <span style={{ paddingLeft: "0.4rem" }}>
+                  ({this.props.meatSum})
+                </span>
+              ) : null}
             </button>
             <button onClick={() => this.props.history.push("/other")}>
               <img src={other} alt="vegetables" />
               <br />
               Other ingredients
+              {this.props.otherSum > 0 ? (
+                <span style={{ paddingLeft: "0.4rem" }}>
+                  ({this.props.otherSum})
+                </span>
+              ) : null}
             </button>
           </div>
           {this.props.ingredientSelected.length === 0 ? null : (
@@ -67,7 +68,7 @@ class Main extends Component {
             </button>
           )}
           <div className={classes.ingredientsSelected}>
-            {ingredientSelectedDiv}
+            {ingredientsSelectedDiv}
           </div>
         </div>
       </div>
@@ -78,6 +79,9 @@ class Main extends Component {
 const mapStateToProps = (state) => {
   return {
     ingredientSelected: state.ingredientSelected,
+    vegetablesSum: state.vegetablesSum,
+    meatSum: state.meatSum,
+    otherSum: state.otherSum,
   };
 };
 

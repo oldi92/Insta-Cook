@@ -26,19 +26,11 @@ class Search extends Component {
   };
 
   render() {
-    // console.log("[RECIPE FETCHED]", this.props.recipes);
-    // console.log("[INGREDIENTS CHOOSEN]", this.props.ingredientSelected);
-    // console.log("[FILTERED RECIPES]", this.props.recipesFiltered);
-
-    // console.log("-------------------------------");
-    // console.log(this.state.width);
-    // console.log(this.state.toggle);
-
     return (
       <Layout {...this.props}>
         <div
           style={{
-            height: this.props.recipesFiltered.length < 2 ? "100vh" : "100%",
+            height: this.props.recipesFiltered.length < 4 ? "100vh" : "100%",
             maxHeight:
               this.props.toggle && this.state.width === "mobile"
                 ? "100vh"

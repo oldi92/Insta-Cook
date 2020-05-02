@@ -69,9 +69,11 @@
       height: 84%;
     }
     width: 90%;
+    height: 78%;
     margin: auto;
     text-align: center;
-    padding-top: 7rem;
+    padding-top: 2rem;
+    overflow-y: auto;
     .collapse {
       position: relative;
       background-color: $bg-primary;

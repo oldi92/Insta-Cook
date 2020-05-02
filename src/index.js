@@ -11,7 +11,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import reducer from "./store/reducer";
 
-const store = createStore(reducer, applyMiddleware(thunk));
+export const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>

@@ -27,7 +27,7 @@ class Navigation extends Component {
   };
 
   componentDidMount() {
-    console.log("NAVIGATION COMPONENT DID MOUNT", this.props);
+    console.log("NAVIGATION COMPONENT DID MOUNT");
 
     //fetch the recipes from the server
     this.props.onfetchRecipes(this.props.ingredientSelected);
@@ -151,7 +151,13 @@ class Navigation extends Component {
 
           {/*  Back button navigation menu  */}
           {this.props.history.location.pathname === "/search" ? null : (
-            <div onClick={this.backHandler} className={classes.back}>
+            <div
+              style={{
+                display: this.state.width === "mobile" ? "block" : "none",
+              }}
+              onClick={this.backHandler}
+              className={classes.back}
+            >
               <FontAwesomeIcon icon={faAngleLeft} size="1x" />
             </div>
           )}
@@ -161,6 +167,13 @@ class Navigation extends Component {
             <div className={classes.collapse}>
               <h2 style={{ display: "flex" }}>
                 Vegetables
+                {this.props.vegetablesSum > 0 ? (
+                  <span
+                    style={{ color: "rgba(50,50,50)", paddingLeft: "0.5rem" }}
+                  >
+                    {this.props.vegetablesSum}
+                  </span>
+                ) : null}
                 <div
                   className={classes.arrowDown}
                   onClick={this.vegetablesCollapseHanlder}
@@ -186,6 +199,13 @@ class Navigation extends Component {
             <div className={classes.collapse}>
               <h2 style={{ display: "flex" }}>
                 Meat and Fish
+                {this.props.meatSum > 0 ? (
+                  <span
+                    style={{ color: "rgba(50,50,50)", paddingLeft: "0.5rem" }}
+                  >
+                    {this.props.meatSum}
+                  </span>
+                ) : null}
                 <div
                   className={classes.arrowDown}
                   onClick={this.meatCollapseHanlder}
@@ -208,7 +228,14 @@ class Navigation extends Component {
             {/* Other ingredients  collapse START here */}
             <div className={classes.collapse}>
               <h2 style={{ display: "flex" }}>
-                Meat and Fish
+                Other ingredients
+                {this.props.otherSum > 0 ? (
+                  <span
+                    style={{ color: "rgba(50,50,50)", paddingLeft: "0.5rem" }}
+                  >
+                    {this.props.otherSum}
+                  </span>
+                ) : null}
                 <div
                   className={classes.arrowDown}
                   onClick={this.otherCollapseHanlder}
@@ -257,6 +284,9 @@ const mapStateToProps = (state) => {
     recipes: state.recipes,
     recipesFiltered: state.recipesFiltered,
     toggle: state.toggle,
+    vegetablesSum: state.vegetablesSum,
+    meatSum: state.meatSum,
+    otherSum: state.otherSum,
   };
 };
 

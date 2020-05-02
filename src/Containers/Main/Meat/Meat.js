@@ -3,10 +3,8 @@ import { connect } from "react-redux";
 
 import * as actions from "../../../store/actions";
 import classes from "../../../assets/style/Main.module.scss";
-import MeatList from "./MeatList/MeatList";
 import { Spinner } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import IngredientGen from "../../../Components/ingredientsGen/IngredientGen";
 
 class Meat extends Component {
   componentDidMount() {
@@ -17,30 +15,15 @@ class Meat extends Component {
   }
 
   render() {
-    console.log(this.props.meatIngredients);
-    console.log(this.props.ingredientSelected);
-
-    let meatDiv = [];
-    if (this.props.meatIngredients) {
-      meatDiv = <MeatList meatList={this.props.meatIngredients} />;
-    }
-
-    let ingredientSelectedDiv = [];
-    if (this.props.ingredientSelected) {
-      ingredientSelectedDiv = this.props.ingredientSelected.map((element) => (
-        <button
-          key={element}
-          onClick={() => this.props.oningredientRemove(element)}
-        >
-          {element}
-          <FontAwesomeIcon
-            style={{ color: "#007bff", marginLeft: "0.5rem" }}
-            icon={faTimes}
-            size="1x"
-          />
-        </button>
-      ));
-    }
+    let meatProps = {
+      imagePath: "meatAndFish",
+      name: "meatIngredients",
+      value: this.props.meatIngredients,
+    };
+    let ingredientsSelectedDiv = [];
+    ingredientsSelectedDiv = this.props.ingredientSelected.map((element) => (
+      <div>{element}</div>
+    ));
 
     return (
       <div className={classes.Container}>
@@ -66,11 +49,11 @@ class Meat extends Component {
                 <span className="sr-only ">Loading...</span>
               </Spinner>
             ) : (
-              meatDiv
+              <IngredientGen ingredients={meatProps} />
             )}
           </div>
           <div className={classes.ingredientsSelected}>
-            {ingredientSelectedDiv}
+            {ingredientsSelectedDiv}
           </div>
         </div>
       </div>
@@ -82,7 +65,6 @@ const mapStateToProps = (state) => {
   return {
     loader: state.loader,
     meatIngredients: state.meatIngredients,
-    error: state.error,
     ingredientSelected: state.ingredientSelected,
   };
 };

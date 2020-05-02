@@ -6,6 +6,28 @@ import Auxiliary from "../../Hoc/Auxiliary/Auxiliary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
+/*
+ PROPS RECEIVED ONLY 1
+ props.ingredients and we need to chose one of this 3 options
+   
+ 1)let vegeterianProps = {
+      imagePath: "vegetables",
+      name: "vegetablesIngredients",
+      value: this.props.vegetablesIngredients,
+    };
+
+ 2)let meatProps = {
+      imagePath: "meatAndFish",
+      name: "meatIngredients",
+      value: this.props.meatIngredients,
+    };
+ 3)let otherProps = {
+      imagePath: "otherIngredients",
+      name: "otherIngredients",
+      value: this.props.otherIngredients,
+       };
+ */
+
 class IngredientGen extends Component {
   componentDidMount() {
     if (
@@ -32,11 +54,25 @@ class IngredientGen extends Component {
       filtered = this.props.ingredientSelected.filter(
         (ingredient) => ingredient === element
       );
+      let imageDiv = "";
+      if (this.props.ingredients.imagePath) {
+        const image = require(`../../assets/ingredients/${this.props.ingredients.imagePath}/${element}.png`);
+        imageDiv = (
+          <Auxiliary>
+            <img src={image} alt="vegetables" />
+            <br />
+          </Auxiliary>
+        );
+      } else {
+        imageDiv = null;
+      }
+
       return filtered.length === 0 ? (
         <button
           onClick={() => this.props.onIngredientAdd(element)}
           key={element}
         >
+          {imageDiv}
           {element}
         </button>
       ) : (
@@ -45,6 +81,7 @@ class IngredientGen extends Component {
           style={{ backgroundColor: "rgb(54, 54, 54)" }}
           key={element}
         >
+          {imageDiv}
           {element}
           <FontAwesomeIcon
             style={{ marginLeft: "0.4rem" }}

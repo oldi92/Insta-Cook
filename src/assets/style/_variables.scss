@@ -43,7 +43,7 @@ $screen-xl-min: 1200px;
       cursor: pointer;
       background-color: $bg-button-hover-primary;
     }
-    font-size: 1rem;
+    font-size: 0.96rem;
     margin: 1rem 0.2rem 0.2rem 0.2rem;
 
     @include lg() {

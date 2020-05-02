@@ -3,10 +3,8 @@ import { connect } from "react-redux";
 
 import * as actions from "../../../store/actions";
 import classes from "../../../assets/style/Main.module.scss";
-import OtherList from "./OtherList/OtherList";
 import { Spinner } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import IngredientGen from "../../../Components/ingredientsGen/IngredientGen";
 
 class Other extends Component {
   componentDidMount() {
@@ -17,29 +15,15 @@ class Other extends Component {
   }
 
   render() {
-    console.log(this.props.meatIngredients);
-
-    let otherDiv = [];
-    if (this.props.ingredients) {
-      otherDiv = <OtherList list={this.props.ingredients} />;
-    }
-
-    let ingredientSelectedDiv = [];
-    if (this.props.ingredientSelected) {
-      ingredientSelectedDiv = this.props.ingredientSelected.map((element) => (
-        <button
-          key={element}
-          onClick={() => this.props.oningredientRemove(element)}
-        >
-          {element}
-          <FontAwesomeIcon
-            style={{ color: "#007bff", marginLeft: "0.5rem" }}
-            icon={faTimes}
-            size="1x"
-          />
-        </button>
-      ));
-    }
+    let otherProps = {
+      imagePath: "otherIngredients",
+      name: "otherIngredients",
+      value: this.props.ingredients,
+    };
+    let ingredientsSelectedDiv = [];
+    ingredientsSelectedDiv = this.props.ingredientSelected.map((element) => (
+      <div>{element}</div>
+    ));
 
     return (
       <div className={classes.Container}>
@@ -65,11 +49,11 @@ class Other extends Component {
                 <span className="sr-only ">Loading...</span>
               </Spinner>
             ) : (
-              otherDiv
+              <IngredientGen ingredients={otherProps} />
             )}
           </div>
           <div className={classes.ingredientsSelected}>
-            {ingredientSelectedDiv}
+            {ingredientsSelectedDiv}
           </div>
         </div>
       </div>

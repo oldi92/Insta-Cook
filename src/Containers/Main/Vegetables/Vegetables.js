@@ -3,10 +3,8 @@ import { connect } from "react-redux";
 
 import * as actions from "../../../store/actions";
 import classes from "../../../assets/style/Main.module.scss";
-import VegetableList from "./VegetablesList/VegetableList";
 import { Spinner } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import IngredientGen from "../../../Components/ingredientsGen/IngredientGen";
 
 class Vegetables extends Component {
   componentDidMount() {
@@ -17,29 +15,16 @@ class Vegetables extends Component {
   }
 
   render() {
-    let vegetablesDiv = [];
-    if (this.props.vegetablesIngredients) {
-      vegetablesDiv = (
-        <VegetableList vegetableList={this.props.vegetablesIngredients} />
-      );
-    }
+    let vegetablesProps = {
+      imagePath: "vegetables",
+      name: "vegetablesIngredients",
+      value: this.props.vegetablesIngredients,
+    };
 
-    let ingredientSelectedDiv = [];
-    if (this.props.ingredientSelected) {
-      ingredientSelectedDiv = this.props.ingredientSelected.map((element) => (
-        <button
-          key={element}
-          onClick={() => this.props.oningredientRemove(element)}
-        >
-          {element}
-          <FontAwesomeIcon
-            style={{ color: "#007bff", marginLeft: "0.5rem" }}
-            icon={faTimes}
-            size="1x"
-          />
-        </button>
-      ));
-    }
+    let ingredientsSelectedDiv = [];
+    ingredientsSelectedDiv = this.props.ingredientSelected.map((element) => (
+      <div>{element}</div>
+    ));
 
     return (
       <div className={classes.Container}>
@@ -64,11 +49,11 @@ class Vegetables extends Component {
                 <span className="sr-only ">Loading...</span>
               </Spinner>
             ) : (
-              vegetablesDiv
+              <IngredientGen ingredients={vegetablesProps} />
             )}
           </div>
           <div className={classes.ingredientsSelected}>
-            {ingredientSelectedDiv}
+            {ingredientsSelectedDiv}
           </div>
         </div>
       </div>

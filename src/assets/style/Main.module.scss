@@ -97,16 +97,12 @@
       margin: auto;
       margin-top: 7rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(6.2rem, 1fr));
-      column-gap: 0;
-      button {
-        &:hover {
-          cursor: pointer;
-          background-color: $bg-button-hover-black;
-        }
-        max-height: 1.4rem;
-        font-size: 0.8rem;
-        margin: 0.1rem;
+      grid-template-columns: repeat(auto-fit, 6rem);
+      justify-content: center;
+      div {
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin: 0.2rem;
         border: none;
         border-radius: 5px;
         background-color: $bg-button-black;
